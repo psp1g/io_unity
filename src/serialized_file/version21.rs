@@ -128,10 +128,10 @@ pub struct SerializedType {
     old_type_hash: [u8; 16],
     #[br(if(enable_type_tree))]
     pub type_tree: Option<TypeTree>,
-	#[br(if(enable_type_tree))]
+    #[br(if(enable_type_tree))]
     type_dependencies_count: i32,
     #[br(count = type_dependencies_count)]
-	#[br(if(enable_type_tree))]
+    #[br(if(enable_type_tree))]
     type_dependencies: Vec<u32>,
 }
 
