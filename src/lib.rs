@@ -4,4 +4,5 @@ pub mod serialized_file;
 pub mod type_tree;
 pub mod unity_asset_view;
 pub mod unityfs;
+pub mod assets;
 mod until;

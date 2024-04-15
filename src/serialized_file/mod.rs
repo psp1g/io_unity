@@ -127,7 +127,7 @@ pub enum SerializedFileFormatVersion {
 }
 
 #[binrw]
-#[brw(repr = i32)]
+#[brw(repr = u32)]
 #[derive(Debug, Eq, PartialEq, TryFromPrimitive, Clone)]
 #[repr(i32)]
 #[allow(non_camel_case_types)]

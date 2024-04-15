@@ -112,7 +112,7 @@ pub struct SerializedFileContent {
     pub unity_version: NullString,
     pub target_platform: BuildTarget,
     pub enable_type_tree: U8Bool,
-    type_count: u32,
+    type_count: i32,
     #[br(args { count: type_count as usize, inner:  SerializedTypeBinReadArgs::builder().enable_type_tree(*enable_type_tree).finalize() })]
     pub types: Vec<SerializedType>,
     pub object_count: i32,

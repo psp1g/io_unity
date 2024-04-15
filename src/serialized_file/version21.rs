@@ -122,14 +122,16 @@ struct SerializedFileContent {
 pub struct SerializedType {
     pub class_id: i32,
     pub is_stripped_type: U8Bool,
-    script_type_index: i16,
+    script_type_index: u16,
     #[br(if(class_id == 114))]
     script_id: Option<[u8; 16]>,
     old_type_hash: [u8; 16],
     #[br(if(enable_type_tree))]
     pub type_tree: Option<TypeTree>,
+	#[br(if(enable_type_tree))]
     type_dependencies_count: i32,
     #[br(count = type_dependencies_count)]
+	#[br(if(enable_type_tree))]
     type_dependencies: Vec<u32>,
 }
 
